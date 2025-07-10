@@ -38,6 +38,7 @@
     p, li, a {
       font-weight: 400;
     }
+    
 
     /*── Page Container ────────────────────────────────*/
     .container {
@@ -149,6 +150,22 @@
       margin-bottom: 0.5rem;
       color: var(--color-muted);
     }
+    /* Skills Lists */
+.skill-category {
+  margin-bottom: 2rem;
+}
+.skill-category h3 {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+.skill-category ul {
+  list-style: disc inside;
+}
+.skill-category li {
+  margin-bottom: 0.25rem;
+  color: var(--color-text);
+}
   </style>
 </head>
 <body>
@@ -206,84 +223,52 @@
 <section id="skills">
   <div class="container">
     <h2>Skills &amp; Technologies</h2>
-    <div class="skills-grid">
-      <!-- Programming Languages -->
-      <div class="skill-item">
-        <img src="icons/python.svg" alt="Python">
-        <p>Python</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/r.svg" alt="R">
-        <p>R</p>
-      </div>
 
-      <!-- Data Manipulation & Analysis -->
-      <div class="skill-item">
-        <img src="icons/sql.svg" alt="SQL">
-        <p>SQL</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/excel.svg" alt="Excel">
-        <p>Excel</p>
-      </div>
+    <div class="skill-category">
+      <h3>Programming Languages</h3>
+      <ul>
+        <li>Python</li>
+        <li>R</li>
+      </ul>
+    </div>
 
-      <!-- Machine Learning Libraries -->
-      <div class="skill-item">
-        <img src="icons/scikit-learn.svg" alt="scikit-learn">
-        <p>scikit-learn</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/tensorflow.svg" alt="TensorFlow">
-        <p>TensorFlow</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/numpy.svg" alt="NumPy">
-        <p>NumPy</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/keras.svg" alt="Keras">
-        <p>Keras</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/scipy.svg" alt="SciPy">
-        <p>SciPy</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/matplotlib.svg" alt="Matplotlib">
-        <p>Matplotlib</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/opencv.svg" alt="OpenCV">
-        <p>OpenCV</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/xgboost.svg" alt="XGBoost">
-        <p>XGBoost</p>
-      </div>
+    <div class="skill-category">
+      <h3>Data Manipulation &amp; Analysis Tools</h3>
+      <ul>
+        <li>SQL</li>
+        <li>Excel</li>
+      </ul>
+    </div>
 
-      <!-- Data Visualization -->
-      <div class="skill-item">
-        <img src="icons/tableau.svg" alt="Tableau">
-        <p>Tableau</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/power-bi.svg" alt="Power BI">
-        <p>Power BI</p>
-      </div>
+    <div class="skill-category">
+      <h3>Machine Learning Libraries</h3>
+      <ul>
+        <li>scikit-learn</li>
+        <li>TensorFlow</li>
+        <li>NumPy</li>
+        <li>Keras</li>
+        <li>SciPy</li>
+        <li>Matplotlib</li>
+        <li>OpenCV</li>
+        <li>XGBoost</li>
+      </ul>
+    </div>
 
-      <!-- Cloud Platforms -->
-      <div class="skill-item">
-        <img src="icons/aws.svg" alt="AWS">
-        <p>AWS</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/azure.svg" alt="Azure">
-        <p>Azure</p>
-      </div>
-      <div class="skill-item">
-        <img src="icons/intel.svg" alt="Intel Tiber AI Cloud">
-        <p>Intel Tiber AI Cloud</p>
-      </div>
+    <div class="skill-category">
+      <h3>Data Visualization</h3>
+      <ul>
+        <li>Tableau</li>
+        <li>Power BI</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Cloud Platforms</h3>
+      <ul>
+        <li>AWS</li>
+        <li>Azure</li>
+        <li>Intel Tiber AI Cloud</li>
+      </ul>
     </div>
   </div>
 </section>
