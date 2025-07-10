@@ -5,138 +5,6 @@
   <title>Akshay Ramakrishnan | Portfolio</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /*── Color Palette ─────────────────────────────────*/
-    :root {
-      --color-primary:   #0D3B66;
-      --color-secondary: #00A8E8;
-      --color-bg:        #F4F4F4;
-      --color-text:      #333333;
-      --color-muted:     #666666;
-    }
-
-    /*── Global Reset & Typography ─────────────────────*/
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--color-text);
-      background: var(--color-bg);
-      scroll-behavior: smooth;
-    }
-    h1,h2,h3 { font-weight: 700; }
-    p, li, a { font-weight: 400; }
-
-    /*── Navigation ───────────────────────────────────*/
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      background: var(--color-primary);
-      padding: 0.75rem 1rem;
-      z-index: 1000;
-    }
-    nav ul {
-      display: flex;
-      list-style: none;
-      overflow-x: auto;
-      justify-content: center;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      white-space: nowrap;
-      font-weight: 600;
-    }
-    nav a:hover {
-      background: var(--color-secondary);
-      border-radius: 4px;
-    }
-
-    /*── Sections ─────────────────────────────────────*/
-    section {
-      padding: 6rem 1rem 3rem;
-      margin-top: 3.5rem;
-    }
-    section:nth-child(even) {
-      background: #fff;
-    }
-    h2 {
-      margin-bottom: 1.5rem;
-      font-size: 2rem;
-      color: var(--color-primary);
-    }
-
-    /*── Hero Section ─────────────────────────────────*/
-    .hero {
-      padding: 8rem 1rem;
-      text-align: center;
-      background: var(--color-primary);
-      color: #fff;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: rgba(255,255,255,0.85);
-      margin-top: 0.5rem;
-    }
-    .btn-primary {
-      display: inline-block;
-      margin-top: 1.25rem;
-      padding: 0.75rem 1.5rem;
-      background: var(--color-secondary);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 4px;
-    }
-    .btn-primary:hover {
-      background: #008fc6; /* slightly darker than secondary */
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#workshops">Workshops</a></li>
-      <li><a href="#collaborations">Collaborations</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#certs">Certifications</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <h1>Hello, I’m Akshay!</h1>
-    <p>Data Science • Machine Learning • AI</p>
-    <a href="Akshay_Ramakrishnan_Resume.pdf" class="btn-primary">Download CV</a>
-  </section>
-
-<!-- ABOUT SECTION -->
-<section id="about" class="about-section">
-  <div class="about-container">
-    <div class="about-image">
-      <!-- Your headshot (upload later as images/profile.jpg) -->
-      <img src="images/profile.jpg" 
-           alt="Akshay Bhuvaneswari Ramakrishnan" 
-           class="profile-pic">
-    </div>
-    <div class="about-text"><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Akshay Ramakrishnan | Portfolio</title>
-
-  <!-- Google Font -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
     rel="stylesheet"
@@ -171,12 +39,17 @@
       font-weight: 400;
     }
 
+    /*── Page Container ────────────────────────────────*/
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
     /*── Navigation ───────────────────────────────────*/
     nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       background: var(--color-primary);
       padding: 0.75rem 1rem;
       z-index: 1000;
@@ -200,11 +73,11 @@
     }
 
     /*── Sections ─────────────────────────────────────*/
-    section {
+    section:not(.hero) {
       padding: 6rem 1rem 3rem;
       margin-top: 3.5rem;
     }
-    section:nth-of-type(even) {
+    section:nth-of-type(even):not(.hero) {
       background: #fff;
     }
     h2 {
@@ -215,7 +88,8 @@
 
     /*── Hero Section ─────────────────────────────────*/
     .hero {
-      padding: 8rem 1rem;
+      margin-top: 3.5rem; /* to account for nav height */
+      padding: 8rem 1rem 3rem;
       text-align: center;
       background: var(--color-primary);
       color: #fff;
@@ -236,21 +110,19 @@
       border-radius: 4px;
     }
     .btn-primary:hover {
-      background: #008fc6; /* slightly darker */
+      background: #008fc6;
     }
 
     /*── About Section ───────────────────────────────*/
     .about-section {
       background: #fff;
-      padding: 4rem 1rem;
+      padding-top: 0; /* handled by section:not(.hero) */
     }
     .about-container {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 2rem;
-      max-width: 1000px;
-      margin: auto;
     }
     .about-image {
       flex: 0 0 200px;
@@ -300,14 +172,16 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
-    <h1>Hello, I’m Akshay!</h1>
-    <p>Data Science • Machine Learning • AI</p>
-    <a href="Akshay_Ramakrishnan_Resume.pdf" class="btn-primary">Download CV</a>
+    <div class="container">
+      <h1>Hello, I’m Akshay!</h1>
+      <p>Data Science • Machine Learning • AI</p>
+      <a href="Akshay_Ramakrishnan_Resume.pdf" class="btn-primary">Download CV</a>
+    </div>
   </section>
 
   <!-- About Section -->
   <section id="about" class="about-section">
-    <div class="about-container">
+    <div class="container about-container">
       <div class="about-image">
         <img src="images/profile.jpg"
              alt="Akshay Bhuvaneswari Ramakrishnan"
@@ -328,57 +202,80 @@
     </div>
   </section>
 
-  <!-- Other Sections (skeleton) -->
-  <section id="skills"><h2>Skills &amp; Technologies</h2></section>
-  <section id="projects">
-    <h2>Projects</h2>
-    <h3 id="projects-ongoing">Ongoing Projects</h3>
-    <!-- Ongoing cards here -->
-    <h3 id="projects-completed">Completed Projects</h3>
-    <!-- Completed cards here -->
-  </section>
-  <section id="publications"><h2>Publications</h2></section>
-  <section id="workshops"><h2>Workshops &amp; Talks</h2></section>
-  <section id="collaborations"><h2>Collaborations</h2></section>
-  <section id="experience"><h2>Experience &amp; Education</h2></section>
-  <section id="certs"><h2>Certifications &amp; Awards</h2></section>
-  <section id="blog"><h2>Blog / Articles</h2></section>
-  <section id="contact"><h2>Contact</h2></section>
-
-</body>
-</html>
-
-      <p>
-        I’m <strong>Akshay Bhuvaneswari Ramakrishnan</strong>, a Data Scientist and former Research Associate in the Laboratory of Computational Intensive Care Medicine (LCICM) at Johns Hopkins University’s Whiting School of Engineering. My work applies AI, machine learning, and statistical modeling to improve patient outcomes in critical care. As an Intel Innovator, Intel-Certified ML Instructor, and Certified MLOps Professional, I specialize in deploying and scaling robust ML systems. I’ve authored two books, edited three more, published 13 Scopus-indexed papers (including two SCI journals), and presented at four international conferences. I’ve participated in five faculty development programs, led two corporate training sessions, and facilitated over 50 offline and 20 online workshops. With prior industry experience as a Data Engineer at Hitachi Energy, I bridge the gap between cutting-edge research and real-world implementation.
-      </p>
-      <ul class="about-stats">
-        <li>🏥 Research Associate, LCICM (Whiting School of Engineering, JHU)</li>
-        <li>🤖 Intel Innovator · Intel-Certified ML Instructor · Certified MLOps Professional</li>
-        <li>📚 Authored 2 books · Edited 3 books · 13 Scopus-indexed + 2 SCI-indexed papers</li>
-        <li>🗣 Presented at 4 international conferences · 50+ offline & 20 online workshops</li>
-        <li>💼 Former Data Engineer @ Hitachi Energy</li>
-      </ul>
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills &amp; Technologies</h2>
+      <!-- content goes here -->
     </div>
-  </div>
-</section>
-
-    <!-- Your bio here -->
   </section>
 
-  <!-- Remaining sections… -->
-  <section id="skills"><h2>Skills & Technologies</h2></section>
+  <!-- Projects Section -->
   <section id="projects">
-    <h2>Projects</h2>
-    <h3 id="projects-ongoing">Ongoing Projects</h3>
-    <h3 id="projects-completed">Completed Projects</h3>
+    <div class="container">
+      <h2>Projects</h2>
+      <h3 id="projects-ongoing">Ongoing Projects</h3>
+      <!-- Ongoing project cards -->
+      <h3 id="projects-completed">Completed Projects</h3>
+      <!-- Completed project cards -->
+    </div>
   </section>
-  <section id="publications"><h2>Publications</h2></section>
-  <section id="workshops"><h2>Workshops & Talks</h2></section>
-  <section id="collaborations"><h2>Collaborations</h2></section>
-  <section id="experience"><h2>Experience & Education</h2></section>
-  <section id="certs"><h2>Certifications & Awards</h2></section>
-  <section id="blog"><h2>Blog / Articles</h2></section>
-  <section id="contact"><h2>Contact</h2></section>
+
+  <!-- Publications Section -->
+  <section id="publications">
+    <div class="container">
+      <h2>Publications</h2>
+      <!-- publications list -->
+    </div>
+  </section>
+
+  <!-- Workshops Section -->
+  <section id="workshops">
+    <div class="container">
+      <h2>Workshops &amp; Talks</h2>
+      <!-- workshops list -->
+    </div>
+  </section>
+
+  <!-- Collaborations Section -->
+  <section id="collaborations">
+    <div class="container">
+      <h2>Collaborations</h2>
+      <!-- logos or descriptions -->
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="container">
+      <h2>Experience &amp; Education</h2>
+      <!-- timeline or entries -->
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certs">
+    <div class="container">
+      <h2>Certifications &amp; Awards</h2>
+      <!-- certifications list -->
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog">
+    <div class="container">
+      <h2>Blog / Articles</h2>
+      <!-- blog links -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <!-- contact info or form -->
+    </div>
+  </section>
 
 </body>
 </html>
