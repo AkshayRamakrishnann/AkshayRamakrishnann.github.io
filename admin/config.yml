@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: "AkshayRamakrishnann/AkshayRamakrishnann.github.io"
+
+media_folder: "images/gallery"       # where uploaded images go
+public_folder: "/images/gallery"
+
+collections:
+  - name: "gallery"
+    label: "Gallery Entries"
+    folder: ""                       # root for data file
+    create: false                    # we’ll edit gallery.json only
+    files:
+      - label: "Gallery JSON"
+        name: "gallery"
+        file: "gallery.json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Images"
+            name: "images"
+            widget: "list"
+            field:
+              { label: "Filename", name: "image", widget: "image" }
