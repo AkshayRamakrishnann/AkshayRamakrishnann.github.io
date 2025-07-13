@@ -80,7 +80,7 @@ h2 {
 .hero {
   margin-top: 3.5rem; /* sits below fixed nav */
   position: relative;
-  background: url('images/hero-canva.jpg') center/cover no-repeat;
+  background: url('images/hero-canva.png') center/cover no-repeat;
   padding: 8rem 1rem 3rem; /* adjust top/bottom spacing */
   color: #fff;
 }
