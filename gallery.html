@@ -1,95 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Gallery | Akshay Ramakrishnan</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section id="gallery">
+  <div class="container">
+    <h2>Gallery</h2>
+    <div id="gallery-container"><!-- JS will populate this --></div>
+  </div>
+</section>
 
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="workshops.html">Workshops</a></li>
-      <li><a href="collaborations.html">Collaborations</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="certs.html">Certifications</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <div class="container">
-      <h2>Gallery</h2>
-
-      <!-- Featured display -->
-      <div class="gallery-detail">
-        
-        <div class="desc">
-          <h3>Workshop Highlight</h3>
-          <p>A highlight from one of my recent workshops—showcasing key concepts in action.</p>
-        </div>
-      </div>
-
-            <!-- First grid group -->
-      <div class="gallery-group">
-        <h3>Machine Learning workshop at EGS Pillay Nagapattinam (May,2025)</h3>
+<script>
+// fetch and render gallery.json
+fetch('gallery.json')
+  .then(r => r.json())
+  .then(data => {
+    const container = document.getElementById('gallery-container');
+    data.forEach(group => {
+      const sg = document.createElement('div');
+      sg.className = 'gallery-group';
+      sg.innerHTML = `<h3>${group.title}</h3>
         <div class="gallery-grid">
-          <div class="gallery-item"><img src="images/gallery/b1.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/gallery/b2.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/gallery/b3.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/gallery/b4.jpg" alt=""></div>
-        </div>
-      </div>
-      
-      <!-- Second grid group -->
-      <div class="gallery-group">
-        <h3>AI For Healthcare workshop at MCET Pollachi (Jan,2025)</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="images/gallery/mcet1.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/gallery/mcet2.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/gallery/mcet3.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/gallery/mcet4.jpg" alt=""></div>
-        </div>
-      </div>
-
-      <!-- third grid group -->
-      <div class="gallery-group">
-        <h3>6th International Conference on Artificial Intelligence,
-Robotics, and Control, Georgia Southern University, Statesboro, GA, USA(May,2025)</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="images/gallery/c1.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/gallery/c2.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/gallery/c3.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/gallery/c4.jpg" alt=""></div>
-        </div>
-      </div>
-
-      <!-- Fourth grid group -->
-      <div class="gallery-group">
-        <h3>AI-Driven Innovations in Academic and Research Librarianship, Thomas Elizabeth College for
-Women, Chennai, India(March,2025)</h3>
-        <div class="gallery-grid">
-          <div class="gallery-item"><img src="images/gallery/d1.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/gallery/d2.jpg" alt=""></div>
-          <div class="gallery-item"><img src="images/gallery/d3.jpg" alt=""></div>
-        </div>
-      </div>
-
-
-    </div>
-  </section>
-
-</body>
-</html>
+          ${group.images.map(fn =>
+            `<div class="gallery-item">
+               <img src="images/gallery/${fn}" alt="">
+             </div>`).join('')}
+        </div>`;
+      container.appendChild(sg);
+    });
+  })
+  .catch(console.error);
+</script>
