@@ -78,17 +78,19 @@ h2 {
 
 /*── Hero / Two-Column Banner ─────────────────────*/
 .hero {
-  background: hotpink !important;
-  /* then the rest… */
-}
-
-.hero {
-  margin-top: 3.5rem; /* sits below fixed nav */
+  margin-top: 3.5rem;               /* sits below your fixed nav */
   position: relative;
-  background: url('images/hero-canva.png') center/cover no-repeat;
-  padding: 8rem 1rem 3rem; /* adjust top/bottom spacing */
+  
+  /* <-- point to your actual file name: */
+  background-image: url('images/hero-canva.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  padding: 8rem 1rem 3rem;          /* tweak to taste */
   color: #fff;
 }
+
 
 /* Flex container: two columns */
 .hero-flex {
