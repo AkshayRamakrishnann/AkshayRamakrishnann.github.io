@@ -7,8 +7,18 @@
   --color-bg:        #F4F4F4;
   --color-text:      #333333;
   --color-muted:     #666666;
+  --color-section-alt: #F0F4F8;
 }
 
+section:not(.hero):not(#workshops):not(#gallery) {
+  background: var(--color-section-alt);
+}
+
+/* remove the old “even/odd” rule if you want every one to use the new shade */
+section:nth-of-type(even):not(.hero),
+section:nth-of-type(odd):not(.hero) {
+  background: none;
+}
 /*── Global Reset & Typography ─────────────────────*/
 * {
   margin: 0;
