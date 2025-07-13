@@ -78,11 +78,10 @@ h2 {
 
 /*── Hero / Two-Column Banner ─────────────────────*/
 .hero {
-  margin-top: 3.5rem;                           /* below fixed nav */
+  margin-top: 3.5rem; /* sits below fixed nav */
   position: relative;
-  background: url('images/hero-canva.jpg')       /* your Canva export */
-              center/cover no-repeat;
-  padding: 8rem 1rem 3rem;                      /* adjust top/bottom spacing */
+  background: url('hero-canva.jpg') center/cover no-repeat;
+  padding: 8rem 1rem 3rem; /* adjust top/bottom spacing */
   color: #fff;
 }
 
@@ -140,7 +139,7 @@ h2 {
   opacity: 0.85;
 }
 
-/* Right column placeholder (can be omitted) */
+/* Right column placeholder (no content needed) */
 .hero-image {
   flex: 1;
 }
