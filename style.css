@@ -78,6 +78,11 @@ h2 {
 
 /*── Hero / Two-Column Banner ─────────────────────*/
 .hero {
+  background: hotpink !important;
+  /* then the rest… */
+}
+
+.hero {
   margin-top: 3.5rem; /* sits below fixed nav */
   position: relative;
   background: url('images/hero-canva.png') center/cover no-repeat;
