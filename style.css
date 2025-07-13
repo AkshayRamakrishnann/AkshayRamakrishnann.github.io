@@ -76,32 +76,89 @@ h2 {
   color: var(--color-primary);
 }
 
-/*── Hero Section ─────────────────────────────────*/
+/*── Hero / Two-Column Banner ─────────────────────*/
 .hero {
-  margin-top: 3.5rem;
-  padding: 8rem 1rem 3rem;
-  text-align: center;
-  background: var(--color-primary);
+  margin-top: 3.5rem;                           /* below fixed nav */
+  position: relative;
+  background: url('images/hero-canva.jpg')       /* your Canva export */
+              center/cover no-repeat;
+  padding: 8rem 1rem 3rem;                      /* adjust top/bottom spacing */
   color: #fff;
 }
-.hero p {
-  font-size: 1.2rem;
+
+/* Flex container: two columns */
+.hero-flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Left column styling */
+.hero-text {
+  flex: 1;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+.hero-name {
+  color: var(--color-secondary);
+}
+.hero-role {
+  font-size: 1.25rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+.hero-lead,
+.hero-extra {
+  font-size: 1rem;
   color: rgba(255,255,255,0.85);
-  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.hero-buttons a {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 .btn-primary {
-  display: inline-block;
-  margin-top: 1.25rem;
-  padding: 0.75rem 1.5rem;
   background: var(--color-secondary);
   color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 4px;
 }
-.btn-primary:hover {
-  background: #008fc6;
+.btn-secondary {
+  background: transparent;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
 }
+.hero-buttons a:hover {
+  opacity: 0.85;
+}
+
+/* Right column placeholder (can be omitted) */
+.hero-image {
+  flex: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-flex {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .hero-buttons {
+    margin-top: 1rem;
+  }
+}
+
 
 /*── About Section ───────────────────────────────*/
 .about-section { background:#fff; }
