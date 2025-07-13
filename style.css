@@ -393,74 +393,84 @@ h2 {
 }
 
 /*─────────────────────────────────────────────────────*/
-/* Consultation Page Styles                           */
+/* Consultation Page Overrides — put these at the very bottom */
 /*─────────────────────────────────────────────────────*/
 
 /* Hero / Intro */
-#consultation-hero {
-  background: var(--color-primary);
-  color: #fff;
-  padding: 6rem 1rem;
-  text-align: center;
+section#consultation-hero {
+  background: var(--color-primary) !important;
+  color: #fff !important;
+  padding: 6rem 1rem !important;
+  text-align: center !important;
 }
-#consultation-hero p {
-  max-width: 700px;
-  margin: 1rem auto 0;
-  color: rgba(255,255,255,0.9);
-  font-size: 1.1rem;
+section#consultation-hero p {
+  max-width: 700px !important;
+  margin: 1rem auto 0 !important;
+  color: rgba(255,255,255,0.9) !important;
+  font-size: 1.1rem !important;
 }
 
-/* Services Grid */
-#services .service-grid {
+/* Services Grid Section */
+section#services {
+  background: var(--color-bg) !important;
+  padding: 6rem 1rem 3rem !important;
+  margin-top: 3.5rem !important;
+}
+section#services .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
-.service-card {
+section#services .service-card {
   background: #fff;
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.service-card h3 {
+section#services .service-card h3 {
   font-size: 1.25rem;
   color: var(--color-primary);
   margin-bottom: 0.75rem;
 }
-.service-card ul {
+section#services .service-card ul {
   list-style: disc inside;
   color: var(--color-text);
 }
-.service-card li {
+section#services .service-card li {
   margin-bottom: 0.5rem;
 }
 
-/* How We Work */
-#process .process-list {
+/* How We Work Section */
+section#process {
+  background: var(--color-bg) !important;
+  padding: 6rem 1rem 3rem !important;
+  margin-top: 3.5rem !important;
+}
+section#process .process-list {
   list-style: decimal inside;
   margin-top: 2rem;
   color: var(--color-text);
 }
-.process-list li {
+section#process .process-list li {
   margin-bottom: 1rem;
   font-size: 1rem;
 }
-.process-list li strong {
+section#process .process-list li strong {
   color: var(--color-primary);
 }
 
-/* Get Started / Contact CTA */
-#consultation-contact {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: var(--color-bg);
+/* Get Started CTA Section */
+section#consultation-contact {
+  background: var(--color-bg) !important;
+  padding: 4rem 1rem !important;
+  text-align: center !important;
 }
-#consultation-contact p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-  color: var(--color-text);
+section#consultation-contact p {
+  margin-bottom: 1.5rem !important;
+  font-size: 1.1rem !important;
+  color: var(--color-text) !important;
 }
-#consultation-contact .btn-primary {
-  padding: 0.75rem 1.5rem;
+section#consultation-contact .btn-primary {
+  padding: 0.75rem 1.5rem !important;
 }
